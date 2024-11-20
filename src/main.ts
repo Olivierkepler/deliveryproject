@@ -1,24 +1,26 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+import './style.css'  // Tailwind will handle the CSS
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript me the best wi</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
+  <div class="flex flex-col items-center justify-center min-h-screen">
+    <h1 class="text-3xl font-bold text-gray-800 mb-6">Welcome to My New Project</h1>
+    <p class="text-lg text-gray-600 mb-4">This is a simple starting point for a TypeScript project.</p>
+    <div class="bg-white p-4 rounded-lg shadow-lg">
+      <button id="counter" type="button" class="px-6 py-3 bg-blue-500 text-white rounded hover:bg-blue-400">
+        Click Me
+      </button>
     </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
+    <p class="mt-4 text-sm text-gray-500">
+      Customize this page to fit your needs!
     </p>
   </div>
 `
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+// Example counter functionality
+// let count = 0
+// const counterButton = document.querySelector<HTMLButtonElement>('#counter')
+// if (counterButton) {
+//   counterButton.addEventListener('click', () => {
+//     count++
+//     counterButton.innerHTML = `Count: ${count}`
+//   })
+// }
